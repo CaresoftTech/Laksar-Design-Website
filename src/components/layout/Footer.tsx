@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import logo from '@/assets/laksar-logo.png';
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,7 +17,7 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Home', path: '/home' },
     { name: 'About Us', path: '/about-us' },
-    { name: 'Our Services', path: '/services' },
+    { name: 'Our Services', path: '/' },
     { name: 'Contact Us', path: '/contact-us' },
   ];
 
@@ -27,13 +28,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <img 
-              src={logo} 
-              alt="Laksar Design Consultancy LLP" 
-              className="h-12 w-auto mb-6 brightness-0 invert"
+            <img
+              src={logo}
+              alt="Laksar Design Consultancy LLP"
+              className="h-12 w-auto mb-6 "
             />
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
-              Laksar Design Consultancy LLP is a leading MEP engineering consultancy 
+              Laksar Design Consultancy LLP is a leading MEP engineering consultancy
               delivering innovative and sustainable solutions for diverse building projects.
             </p>
             <div className="flex gap-3">
@@ -49,6 +50,15 @@ const Footer = () => {
               <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
+              <a
+                href="https://wa.me/911234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors"
+              >
+                <FaWhatsapp className="w-5 h-5" />
+              </a>
+
             </div>
           </div>
 
@@ -58,7 +68,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
-                  <Link 
+                  <Link
                     to={link.path}
                     className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors text-sm"
                   >
@@ -76,7 +86,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     to="/services"
                     className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors text-sm"
                   >
@@ -95,8 +105,9 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 text-accent flex-shrink-0" />
                 <span className="text-primary-foreground/80 text-sm">
-                  123 Business Park, Tech Hub,<br />
-                  Mumbai, Maharashtra 400001
+                  Plot No. 2A, <br /> Royal Nagar 1st Main Road, <br />
+                  Royal Nagar, Kovoor, <br /> Chennai – 600 128. <br />
+                  Tamil Nadu, India
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -107,8 +118,14 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent flex-shrink-0" />
-                <a href="mailto:info@laksardesign.com" className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
-                  info@laksardesign.com
+                <a href="mailto:arul@laksardesign.in" className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
+                  arul@laksardesign.in 
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-accent flex-shrink-0" />
+                <a href="mailto:admin@laksardesign.in" className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
+                  admin@laksardesign.in
                 </a>
               </li>
             </ul>
@@ -116,18 +133,15 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="border-t border-primary-foreground/20">
-        <div className="container-max px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
-            <p>© {currentYear} Laksar Design Consultancy LLP. All rights reserved.</p>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
-            </div>
-          </div>
-        </div>
-      </div>
+{/* Copyright */}
+<div className="border-t border-primary-foreground/20">
+  <div className="container-max px-4 py-6">
+    <p className="text-sm text-primary-foreground/70 text-center">
+      © {currentYear} Laksar Design Consultancy LLP. All rights reserved.
+    </p>
+  </div>
+</div>
+
     </footer>
   );
 };

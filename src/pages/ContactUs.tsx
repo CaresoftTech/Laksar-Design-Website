@@ -28,15 +28,15 @@ const ContactUs = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     toast({
       title: "Message Sent!",
       description: "Thank you for contacting us. We'll get back to you shortly.",
     });
-    
+
     setFormData({
       name: '',
       email: '',
@@ -54,8 +54,8 @@ const ContactUs = () => {
         {/* Hero Section */}
         <section className="relative py-20 md:py-32 bg-primary overflow-hidden">
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-highlight rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg- rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg- rounded-full blur-3xl" />
           </div>
           <div className="container-max px-4 relative">
             <div className="max-w-3xl mx-auto text-center">
@@ -89,8 +89,9 @@ const ContactUs = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Office Address</h3>
                       <p className="text-muted-foreground text-sm">
-                        123 Business Park, Tech Hub,<br />
-                        Mumbai, Maharashtra 400001
+                        Plot No. 2A, <br /> Royal Nagar 1st Main Road, <br />
+                        Royal Nagar, Kovoor, <br /> Chennai – 600 128. <br />
+                        Tamil Nadu, India
                       </p>
                     </div>
                   </div>
@@ -101,8 +102,8 @@ const ContactUs = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Phone Number</h3>
                       <p className="text-muted-foreground text-sm">
-                        +91 123 456 7890<br />
-                        +91 987 654 3210
+                        +91 1234567890<br />
+                        +91 1234567890
                       </p>
                     </div>
                   </div>
@@ -113,8 +114,8 @@ const ContactUs = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Email Address</h3>
                       <p className="text-muted-foreground text-sm">
-                        info@laksardesign.com<br />
-                        projects@laksardesign.com
+                        arul@laksardesign.in <br />
+                        admin@laksardesign.in
                       </p>
                     </div>
                   </div>
@@ -150,7 +151,7 @@ const ContactUs = () => {
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
-                          placeholder="John Doe"
+                          placeholder="Your Name"
                           required
                           className="h-12"
                         />
@@ -165,7 +166,7 @@ const ContactUs = () => {
                           type="email"
                           value={formData.email}
                           onChange={handleChange}
-                          placeholder="john@example.com"
+                          placeholder="example@gmail.com"
                           required
                           className="h-12"
                         />
@@ -181,7 +182,7 @@ const ContactUs = () => {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          placeholder="+91 98765 43210"
+                          placeholder="+91 1234567890"
                           className="h-12"
                         />
                       </div>
@@ -215,10 +216,10 @@ const ContactUs = () => {
                         className="resize-none"
                       />
                     </div>
-                    <Button 
-                      type="submit" 
-                      variant="hero" 
-                      size="lg" 
+                    <Button
+                      type="submit"
+                      variant="hero"
+                      size="lg"
                       disabled={isSubmitting}
                       className="w-full sm:w-auto"
                     >
@@ -234,8 +235,10 @@ const ContactUs = () => {
 
         {/* Map Section */}
         <section className="h-96 bg-muted">
+
+
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995!3d19.08219865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1702900000000!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.5373159476085!2d80.1289201!3d13.0069783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261ad0d4fd2c7%3A0xd9480b6cc0c92109!2sLaksar%20Design%20Consultancy%20LLP%20(MEP%20Consultants)!5e1!3m2!1sen!2sin!4v1766471305931!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}

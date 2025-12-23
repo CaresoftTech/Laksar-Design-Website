@@ -12,7 +12,7 @@ const CompanyIntro = () => {
             {/* <span className="inline-block px-4 py-1.5 bg-secondary/10 text-secondary text-sm font-semibold rounded-full mb-4">
               About Our Company
             </span> */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-[#275781] font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-[#214e75] font-bold text-foreground mb-6">
               Laksar Design<br />
               <span className="text-gradient">Consultancy LLP</span>
             </h2>

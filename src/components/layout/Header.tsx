@@ -20,7 +20,7 @@ const Header = () => {
   const navLinks = [
     { name: 'Home', path: '/home' },
     { name: 'About Us', path: '/about-us' },
-    { name: 'Services', path: '/services' },
+    { name: 'Services', path: '/' },
     { name: 'Contact Us', path: '/contact-us' },
   ];
 
@@ -38,7 +38,7 @@ const Header = () => {
             </a>
             <a href="mailto:info@laksardesign.com" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="w-4 h-4" />
-              info@laksardesign.com
+              arul@laksardesign.in
             </a>
           </div>
           <div className="text-primary-foreground/80">

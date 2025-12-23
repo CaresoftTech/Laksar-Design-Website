@@ -82,7 +82,7 @@ const Services = () => {
                 Comprehensive MEP Solutions
               </h1>
               <p className="text-xl text-primary-foreground/90 animate-fade-in-up animation-delay-200">
-                From concept to completion, we deliver innovative engineering solutions 
+                From concept to completion, we deliver innovative engineering solutions
                 across diverse building types and industries.
               </p>
             </div>
@@ -94,13 +94,13 @@ const Services = () => {
           <div className="container-max">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {services.map((service, index) => (
-                <div 
+                <div
                   key={index}
                   className="group bg-card rounded-xl overflow-hidden shadow-sm card-hover"
                 >
                   <div className="relative h-56 overflow-hidden">
-                    <img 
-                      src={service.image} 
+                    <img
+                      src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
@@ -128,7 +128,7 @@ const Services = () => {
                 Our Expertise
               </span>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-                What We Offer
+                We Can Offer
               </h2>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -138,7 +138,12 @@ const Services = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">Mechanical</h3>
                 <p className="text-muted-foreground text-sm">
-                  HVAC systems, ventilation, fire protection, plumbing, and mechanical utilities design.
+                  Air Conditioning System,
+                  Ventilation System,
+                  Fire Protection System,
+                  Process Air & Water System,
+                  Industrial Gas Distribution.
+
                 </p>
               </div>
               <div className="bg-card p-8 rounded-xl text-center">
@@ -147,7 +152,12 @@ const Services = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">Electrical</h3>
                 <p className="text-muted-foreground text-sm">
-                  Power distribution, lighting, LV systems, communication networks, and BMS integration.
+                  Electrical – LT / HT,
+                  Diesel Generator & UPS,
+                  Solar Power System,
+                  IBMS,
+                  IT & Networking System.
+
                 </p>
               </div>
               <div className="bg-card p-8 rounded-xl text-center">
@@ -156,7 +166,11 @@ const Services = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">Plumbing</h3>
                 <p className="text-muted-foreground text-sm">
-                  Water supply, drainage, sewage treatment, rainwater harvesting, and fire hydrant systems.
+                  Water Supply & Drainage Rainwater System,
+                  Storm Water Drain,
+                  Water Treatment Plant,
+                  Sewage Treatment Plant.
+
                 </p>
               </div>
             </div>

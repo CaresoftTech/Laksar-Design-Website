@@ -6,8 +6,8 @@ import { Target, Eye, Users, Award, Heart, Zap } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: 'Rajesh Kumar',
-    role: 'Founder & Managing Director',
+    name: 'S. Arul Murugan ',
+    role: 'Founder & Designated Partner',
     description: 'Over 25 years of experience in MEP engineering and project management.',
   },
   {
@@ -83,7 +83,7 @@ const AboutUs = () => {
         <section className="section-padding bg-background">
           <div className="container-max grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl font-display text-[#214e75] font-bold mb-6">
                 Our Story
               </h2>
               <p className="text-muted-foreground mb-6">
@@ -167,7 +167,7 @@ const AboutUs = () => {
                 <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
                   Why Choose Us
                 </span>
-                <h2 className="text-3xl md:text-4xl font-display font-bold">
+                <h2 className="text-3xl md:text-4xl text-[#214e75]  font-display font-bold">
                   Our Strengths
                 </h2>
               </div>
@@ -193,9 +193,73 @@ const AboutUs = () => {
                 ))}
               </div>
             </div>
-
           </div>
         </section>
+
+
+
+
+        <section className="py-20 bg-muted">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-lime-500">Our Leadership Team</h2>
+            <div className="max-w-6xl mx-auto space-y-12">
+              <div className="bg-card/50 backdrop-blur-sm rounded-lg border border-lime-500/20 overflow-hidden hover:border-lime-500/40 transition-all duration-300 animate-fade-in">
+                <div className="grid md:grid-cols-2 gap-8 p-8 items-center">
+                  <div className="flex justify-center">
+
+                  </div>
+                  <div className="flex flex-col justify-center">
+                    <h3 className="text-3xl font-bold text-[#275781] mb-2">S. Arul Murugan </h3>
+                    <p className="text-xl text-foreground mb-2">Founder & Designated Partner</p>
+                    <p className="text-foreground  text-m leading-relaxed mb-4">
+                      With over two decades of progressive experience in the MEP consultancy domain, I founded this organization in 2021, where I lead the MEP design projects with a focus on innovation, sustainability, and client-centric solutions. Prior to this, I served as Director at a MEP consultancy firm for three years. My longest and most formative tenure (2005-2018) was with the esteemed firm M/s. C. R. Narayana Rao (Consultants) Pvt Ltd, where I made significant contributions to landmark infrastructure projects and multidisciplinary collaboration. My professional journey began in 2004 as a Design Engineer at M/s. Air Treatment Engineering Pvt Ltd, where I established a foundation in HVAC systems. My career reflects a deep commitment to engineering excellence and delivering value-driven solutions across the built environment.
+
+                    </p>
+                    <p className="text-foreground leading-relaxed mb-4">
+                      Member of Indian Society of Heating, Refrigerating and Air Conditioning Engineers (ISHRAE) since 2008.
+                      Member of Fire & Security Association of India (FSAI) since 2016.
+                      Member of Indian Plumbing Association (IPA) since 2020.
+
+                    </p>
+                    <p className="text-foreground italic">
+                      &quot;Engineering excellence comes from experience, integrity, and sustainable value.&quot; – S. Arul Murugan
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card/50 backdrop-blur-sm rounded-lg border border-lime-500/20 overflow-hidden hover:border-lime-500/40 transition-all duration-300 animate-fade-in">
+                <div className="grid md:grid-cols-2 gap-8 p-8 items-center">
+                  <div className="flex flex-col justify-center order-2 md:order-1">
+                    <h3 className="text-3xl font-bold text-lime-500 mb-2">R. Vidhya </h3>
+                    <p className="text-xl text-foreground mb-2">Designated Partner</p>
+                    <p className="text-foreground leading-relaxed mb-4">
+                      R. Vidhya plays a key role in overseeing the administrative and human resources
+                      functions at Laksar Design Consultancy LLP. She ensures smooth day-to-day
+                      operations, effective workforce coordination, and structured internal processes
+                      that support the organization’s engineering and design teams.
+                    </p>
+
+                    <p className="text-foreground leading-relaxed mb-4">
+                      With a strong focus on organizational efficiency, compliance, and people
+                      management, she contributes significantly to maintaining a professional,
+                      well-organized, and productive work environment.
+                    </p>
+
+                    <p className="text-foreground italic">
+                      “Strong administration builds strong teams and sustainable organizations.”
+                    </p>
+                  </div>
+                  <div className="flex justify-center order-1 md:order-2">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
 
         {/* Team */}
         <section className="section-padding bg-muted">
