@@ -2,7 +2,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Target, Eye, Heart, Users, Award, Zap } from 'lucide-react';
+import { Target, Eye, Users, Award, Heart, Zap } from 'lucide-react';
 
 const teamMembers = [
   {
@@ -54,6 +54,7 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen">
       <Header />
+
       <main>
         {/* Hero Section */}
         <section className="relative py-20 md:py-32 bg-primary overflow-hidden">
@@ -61,17 +62,18 @@ const AboutUs = () => {
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary rounded-full blur-3xl" />
           </div>
-          <div className="container-max px-4 relative">
-            <div className="max-w-3xl">
-              <span className="inline-block px-4 py-1.5 bg-accent text-accent-foreground text-sm font-semibold rounded-full mb-4 animate-fade-in">
+
+          <div className="container-max px-4 relative flex justify-center text-center">
+            <div className="max-w-3xl mx-auto">
+              <span className="inline-block mx-auto px-4 py-1.5 bg-accent text-accent-foreground text-sm font-semibold rounded-full mb-4 animate-fade-in">
                 About Us
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mb-6 animate-fade-in-up">
-                Building Trust Through<br />Engineering Excellence
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mb-6 animate-fade-in-up text-center">
+                Building Trust Through <br /> Engineering Excellence
               </h1>
-              <p className="text-xl text-primary-foreground/90 animate-fade-in-up animation-delay-200">
-                Laksar Design Consultancy LLP has been at the forefront of MEP engineering 
-                innovation for over 15 years, delivering exceptional solutions across India.
+              <p className="text-xl text-primary-foreground/90 animate-fade-in-up animation-delay-200 text-center">
+                Laksar Design Consultancy LLP delivers innovative, reliable, and
+                sustainable MEP engineering solutions across India.
               </p>
             </div>
           </div>
@@ -79,136 +81,143 @@ const AboutUs = () => {
 
         {/* Company Overview */}
         <section className="section-padding bg-background">
-          <div className="container-max">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-                  Our Story
-                </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  Founded in 2009, Laksar Design Consultancy LLP emerged from a vision to 
-                  revolutionize MEP engineering in India. What started as a small team of 
-                  passionate engineers has grown into one of the country's most respected 
-                  engineering consultancies.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Our journey has been marked by continuous innovation, unwavering commitment 
-                  to quality, and a deep understanding of our clients' needs. Today, we serve 
-                  diverse sectors including commercial, industrial, healthcare, education, and 
-                  residential projects.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  With a team of 50+ skilled engineers and state-of-the-art design tools, 
-                  we deliver comprehensive MEP solutions that are efficient, sustainable, 
-                  and cost-effective.
-                </p>
+          <div className="container-max grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+                Our Story
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                Established in 2021 in Chennai, India, LAKSAR DESIGN CONSULTANCY LLP
+                is a multi-disciplinary engineering consultancy specializing in
+                Mechanical, Electrical, and Plumbing (MEP) services.
+              </p>
+              <p className="text-muted-foreground mb-6">
+                Our expert engineers deliver innovative, functional, and efficient
+                designs while maintaining the highest standards of quality and
+                sustainability.
+              </p>
+              <p className="text-muted-foreground">
+                We adapt to evolving industry needs using advanced tools and proven
+                engineering practices to ensure cost-effective and timely delivery.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-[#275781] text-primary-foreground p-6 rounded-xl">
+                <div className="text-4xl font-bold">2021</div>
+                <div className="text-sm opacity-80">Year Established</div>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-primary text-primary-foreground p-6 rounded-xl">
-                  <div className="text-4xl font-bold mb-2">2009</div>
-                  <div className="text-primary-foreground/80">Year Established</div>
-                </div>
-                <div className="bg-secondary text-secondary-foreground p-6 rounded-xl">
-                  <div className="text-4xl font-bold mb-2">500+</div>
-                  <div className="text-secondary-foreground/80">Projects Completed</div>
-                </div>
-                <div className="bg-accent text-accent-foreground p-6 rounded-xl">
-                  <div className="text-4xl font-bold mb-2">50+</div>
-                  <div className="text-accent-foreground/80">Team Members</div>
-                </div>
-                <div className="bg-highlight text-highlight-foreground p-6 rounded-xl">
-                  <div className="text-4xl font-bold mb-2">20+</div>
-                  <div className="text-highlight-foreground/80">Cities Served</div>
-                </div>
+              <div className="bg-[#50a5d3] text-secondary-foreground p-6 rounded-xl">
+                <div className="text-4xl font-bold">500+</div>
+                <div className="text-sm opacity-80">Projects Completed</div>
+              </div>
+              <div className="bg-[#9ec437] text-accent-foreground p-6 rounded-xl">
+                <div className="text-4xl font-bold">50+</div>
+                <div className="text-sm opacity-80">Team Members</div>
+              </div>
+              <div className="bg-[#50a93e] text-[#50a93e]-foreground p-6 rounded-xl">
+                <div className="text-4xl font-bold">20+</div>
+                <div className="text-sm opacity-80">Cities Served</div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Vision & Mission */}
-        <section className="section-padding bg-muted">
-          <div className="container-max">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-card p-8 md:p-10 rounded-xl shadow-sm">
-                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6">
-                  <Eye className="w-7 h-7 text-primary-foreground" />
-                </div>
-                <h3 className="text-2xl font-display font-bold text-foreground mb-4">
+        {/* Vision, Mission & Strengths */}
+        <section className="section-padding bg-muted overflow-hidden">
+          <div className="container-max space-y-16">
+
+            {/* Vision & Mission */}
+            <div className="grid lg:grid-cols-2 gap-10">
+              {/* Vision */}
+              <div className="relative bg-gradient-to-br from-primary to-secondary text-primary-foreground p-8 md:p-10 rounded-2xl shadow-lg">
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
+                <Eye className="w-10 h-10 mb-6 opacity-90" />
+                <h3 className="text-3xl font-display font-bold mb-4">
                   Our Vision
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  To be the most trusted and innovative MEP engineering consultancy in India, 
-                  setting benchmarks for excellence in sustainable building solutions and 
-                  contributing to a greener future for generations to come.
-                </p>
+                <ul className="space-y-3 text-primary-foreground/90 text-lg">
+                  <li>• Professional approach</li>
+                  <li>• Ethical business practices</li>
+                  <li>• Mutual trust & honesty</li>
+                  <li>• Excellence in design</li>
+                  <li>• Engineering innovations</li>
+                </ul>
               </div>
-              <div className="bg-card p-8 md:p-10 rounded-xl shadow-sm">
-                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-accent to-secondary flex items-center justify-center mb-6">
-                  <Target className="w-7 h-7 text-primary-foreground" />
-                </div>
-                <h3 className="text-2xl font-display font-bold text-foreground mb-4">
+
+              {/* Mission */}
+              <div className="relative bg-gradient-to-br from-primary to-secondary text-primary-foreground p-8 md:p-10 rounded-2xl shadow-lg">
+                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
+                <Target className="w-10 h-10 mb-6 opacity-90" />
+                <h3 className="text-3xl font-display font-bold mb-4">
                   Our Mission
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  To deliver exceptional MEP engineering solutions that exceed client expectations, 
-                  embrace cutting-edge technologies, and promote sustainable practices while 
-                  nurturing talent and fostering a culture of continuous learning.
-                </p>
+                <ul className="space-y-3 text-primary-foreground/90 text-lg">
+                  <li>• Ownership and accountability</li>
+                  <li>• Ethical and transparent delivery</li>
+                  <li>• Long-term client relationships</li>
+                  <li>• Innovative & efficient MEP solutions</li>
+                </ul>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* Core Values */}
-        <section className="section-padding bg-background">
-          <div className="container-max">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1.5 bg-secondary/10 text-secondary text-sm font-semibold rounded-full mb-4">
-                What Drives Us
-              </span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-                Our Core Values
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {coreValues.map((value, index) => (
-                <div key={index} className="text-center p-6 bg-card rounded-xl shadow-sm card-hover">
-                  <div className="w-14 h-14 mx-auto rounded-full bg-accent/10 flex items-center justify-center mb-4">
-                    <value.icon className="w-7 h-7 text-accent" />
+            {/* Strengths */}
+            <div>
+              <div className="text-center mb-12">
+                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+                  Why Choose Us
+                </span>
+                <h2 className="text-3xl md:text-4xl font-display font-bold">
+                  Our Strengths
+                </h2>
+              </div>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  'Customer-friendly design approach',
+                  'Mix of experienced and emerging team',
+                  'Well-coordinated teamwork',
+                  'Simple, flexible and reliable team',
+                  'Quality & time-bound deliverables',
+                  'Systematic work approach',
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="group bg-card p-6 rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
+                  >
+                    <div className="w-12 h-12 mb-4 rounded-full bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Zap className="w-6 h-6 text-accent" />
+                    </div>
+                    <p className="text-muted-foreground">{item}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{value.title}</h3>
-                  <p className="text-muted-foreground text-sm">{value.description}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+
           </div>
         </section>
 
-        {/* Team Section */}
+        {/* Team */}
         <section className="section-padding bg-muted">
           <div className="container-max">
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
                 Leadership
               </span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
                 Meet Our Team
               </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Our experienced leadership team brings together decades of expertise in MEP engineering.
-              </p>
             </div>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {teamMembers.map((member, index) => (
                 <div key={index} className="bg-card rounded-xl overflow-hidden shadow-sm card-hover">
                   <div className="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                    <div className="w-24 h-24 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                      <Users className="w-12 h-12 text-primary-foreground" />
-                    </div>
+                    <Users className="w-12 h-12 text-primary-foreground" />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-1">{member.name}</h3>
-                    <p className="text-accent font-medium text-sm mb-3">{member.role}</p>
+                    <h3 className="text-xl font-semibold">{member.name}</h3>
+                    <p className="text-accent text-sm mb-2">{member.role}</p>
                     <p className="text-muted-foreground text-sm">{member.description}</p>
                   </div>
                 </div>
@@ -218,22 +227,18 @@ const AboutUs = () => {
         </section>
 
         {/* CTA */}
-        <section className="section-padding bg-primary">
-          <div className="container-max text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-6">
-              Let's Build Something Amazing Together
-            </h2>
-            <p className="text-primary-foreground/90 text-lg max-w-2xl mx-auto mb-8">
-              Ready to partner with a team that shares your vision for excellence?
-            </p>
-            <Link to="/contact-us">
-              <Button variant="hero" size="xl">
-                Contact Us Today
-              </Button>
-            </Link>
-          </div>
+        <section className="section-padding bg-primary text-center">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-6">
+            Let’s Build Something Amazing Together
+          </h2>
+          <Link to="/contact-us">
+            <Button variant="hero" size="xl">
+              Contact Us Today
+            </Button>
+          </Link>
         </section>
       </main>
+
       <Footer />
     </div>
   );
