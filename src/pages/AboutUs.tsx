@@ -247,7 +247,7 @@ const AboutUs = () => {
                     </p>
 
                     <p className="text-foreground italic">
-                      “Strong administration builds strong teams and sustainable organizations.”
+                      “Strong administration builds strong teams and sustainable organizations..”
                     </p>
                   </div>
                   <div className="flex justify-center order-1 md:order-2">
