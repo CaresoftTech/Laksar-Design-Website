@@ -13,6 +13,14 @@ import serviceEducation from '@/assets/service-education.jpg';
 import serviceRnd from '@/assets/service-rnd.jpg';
 import serviceDatacenter from '@/assets/service-datacenter.jpg';
 import serviceResidential from '@/assets/service-residential.jpg';
+import serviceAuditorium from '@/assets/picture.png';
+import serviceCommercial from '@/assets/commercial.png';
+import serviceHealth from '@/assets/hospital.png';
+
+import mechanicalIcon from "@/assets/mechanical.png";
+import electricalIcon from "@/assets/electrical.png";
+import plumbingIcon from "@/assets/plumbing.png";
+
 
 const services = [
   {
@@ -60,7 +68,58 @@ const services = [
     description: 'Comfortable and sustainable MEP systems for residential towers and housing complexes.',
     image: serviceResidential,
   },
+  {
+    title: 'Auditorium & Conventional Center',
+    description: 'Comfortable and sustainable MEP systems for Auditorium & Conventional Center and housing complexes.',
+    image: serviceAuditorium,
+  },
+  {
+    title: 'Commercial Buildings',
+    description: 'Comfortable and sustainable MEP systems for Commercial Buildings and housing complexes.',
+    image: serviceCommercial,
+  },
+  {
+    title: 'Health Care Buildings',
+    description: 'Comfortable and sustainable MEP systems for Health Care Buildings.',
+    image: serviceHealth,
+  },
 ];
+
+const offers = [
+  {
+    title: "Mechanical",
+    icon: mechanicalIcon,
+    points: [
+      "Air Conditioning System",
+      "Ventilation System",
+      "Fire Protection System",
+      "Process Air & Water System",
+      "Industrial Gas Distribution",
+    ],
+  },
+  {
+    title: "Electrical",
+    icon: electricalIcon,
+    points: [
+      "LT / HT Electrical Systems",
+      "Diesel Generator & UPS",
+      "Solar Power System",
+      "IBMS",
+      "IT & Networking System",
+    ],
+  },
+  {
+    title: "Plumbing",
+    icon: plumbingIcon,
+    points: [
+      "Water Supply & Drainage",
+      "Rainwater & Storm Water System",
+      "Water Treatment Plant",
+      "Sewage Treatment Plant",
+    ],
+  },
+];
+
 
 const Services = () => {
   return (
@@ -89,30 +148,56 @@ const Services = () => {
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="section-padding bg-background">
-          <div className="container-max">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* Services Section */}
+        <section className="relative py-16 sm:py-20 bg-white overflow-hidden">
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#275781] tracking-tight">
+                Our Services
+              </h2>
+
+            </div>
+
+            {/* Services Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="group bg-card rounded-xl overflow-hidden shadow-sm card-hover"
+                  className="
+            group relative rounded-2xl overflow-hidden
+            bg-white/10 backdrop-blur-xl
+            border border-white/20
+            shadow-xl
+            transition-all duration-500
+            hover:-translate-y-3 hover:shadow-xl hover:shadow-cyan-400/30
+          "
                 >
-                  <div className="relative h-56 overflow-hidden">
+                  {/* Image */}
+                  <div className="relative h-48 sm:h-52 overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-60" />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
+
+                  {/* Content */}
+                  <div className="relative p-6 sm:p-7">
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#275781] mb-3 group-hover:text-cyan-400 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+
+                    <p className="text-sm sm:text-base text-gray/20 leading-relaxed">
                       {service.description}
                     </p>
+
+                    {/* bottom line animation */}
+                    {/* <span className="absolute bottom-0 left-0 h-[3px] w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full" /> */}
                   </div>
                 </div>
               ))}
@@ -120,65 +205,88 @@ const Services = () => {
           </div>
         </section>
 
+
         {/* What We Offer */}
         <section className="section-padding bg-muted">
           <div className="container-max">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1.5 bg-secondary/10 text-secondary text-sm font-semibold rounded-full mb-4">
+
+            {/* Heading */}
+            <div className="text-center mb-16">
+              <span className="inline-block px-5 py-2 rounded-full bg-[#275781]/10 text-[#275781] text-sm font-semibold mb-4">
                 Our Expertise
               </span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-[#275781] mb-3">
                 We Can Offer
               </h2>
+
+              <p className="max-w-xl mx-auto text-muted-foreground text-sm md:text-base">
+                End-to-end MEP solutions with quality, safety and sustainability.
+              </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-card p-8 rounded-xl text-center">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary-foreground">M</span>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Mechanical</h3>
-                <p className="text-muted-foreground text-sm">
-                  Air Conditioning System,
-                  Ventilation System,
-                  Fire Protection System,
-                  Process Air & Water System,
-                  Industrial Gas Distribution.
 
-                </p>
-              </div>
-              <div className="bg-card p-8 rounded-xl text-center">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-accent flex items-center justify-center">
-                  <span className="text-2xl font-bold text-accent-foreground">E</span>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Electrical</h3>
-                <p className="text-muted-foreground text-sm">
-                  Electrical – LT / HT,
-                  Diesel Generator & UPS,
-                  Solar Power System,
-                  IBMS,
-                  IT & Networking System.
+            {/* Offers */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+              {offers.map((offer, index) => (
+                <div
+                  key={index}
+                  className="
+            relative
+            bg-white
+            rounded-[2.5rem]
+            p-8
+            shadow-[0_10px_40px_rgba(0,0,0,0.08)]
+            hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)]
+            transition-all duration-300
+            hover:-translate-y-2
+          " >
+                  {/* Icon Bubble */}
+                  <div className="absolute -top-8 left-8">
+                    <div className="
+              w-20 h-20
+              rounded-full
+              bg-[#53c4d8]/15
+              flex items-center justify-center
+              shadow-md
+            ">
+                      <img
+                        src={offer.icon}
+                        alt={offer.title}
+                        className="w-62 h-16 object-contain rounded-sm"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.src = "/icons/default.png";
+                        }}
+                      />
+                    </div>
+                  </div>
 
-                </p>
-              </div>
-              <div className="bg-card p-8 rounded-xl text-center">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-secondary flex items-center justify-center">
-                  <span className="text-2xl font-bold text-secondary-foreground">P</span>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Plumbing</h3>
-                <p className="text-muted-foreground text-sm">
-                  Water Supply & Drainage Rainwater System,
-                  Storm Water Drain,
-                  Water Treatment Plant,
-                  Sewage Treatment Plant.
+                  {/* Content */}
+                  <div className="pt-8">
+                    <h3 className="text-xl font-semibold text-[#275781] mb-4">
+                      {offer.title}
+                    </h3>
 
-                </p>
-              </div>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      {offer.points.map((point, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#53c4d8]" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
+
           </div>
         </section>
 
+
+
         {/* CTA */}
-        <section className="section-padding bg-gradient-to-r from-primary to-secondary">
+        <section className="section-padding bg-gradient-to-br from-[#183b5e] via-[#21a1d3] to-[#1fd349]">
           <div className="container-max text-center">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-6">
               Have a Project in Mind?

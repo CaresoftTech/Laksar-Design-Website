@@ -19,7 +19,7 @@ const Home = () => {
         <MilestoneCounters />
         
         {/* CTA Section */}
-        <section className="section-padding bg-gradient-to-r from-secondary to-accent">
+        <section className="section-padding bg-gradient-to-br from-[#183b5e] via-[#21a1d3]  to-[#06eb3b] text-white">
           <div className="container-max text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary-foreground mb-6">
               Ready to Start Your Project?

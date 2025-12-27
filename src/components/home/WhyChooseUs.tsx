@@ -41,7 +41,7 @@ const WhyChooseUs = () => {
           <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent text-sm font-semibold rounded-full mb-4">
             Why Choose Us
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-[#214e75] font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-[#214e75] font-bold  mb-4">
             The Laksar Advantage
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -55,8 +55,8 @@ const WhyChooseUs = () => {
               key={index}
               className="group bg-card p-6 md:p-8 rounded-xl shadow-sm card-hover"
             >
-              <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-accent to-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-7 h-7 text-primary-foreground" />
+              <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#38e8f8]  to-[#74c165] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="w-7 h-7 text-primary-foreground" />  
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">
                 {feature.title}

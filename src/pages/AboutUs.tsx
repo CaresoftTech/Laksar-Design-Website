@@ -3,6 +3,7 @@ import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Target, Eye, Users, Award, Heart, Zap } from 'lucide-react';
+import visionMissionImg from '@/assets/vission.png';
 
 const teamMembers = [
   {
@@ -11,17 +12,17 @@ const teamMembers = [
     description: 'Over 25 years of experience in MEP engineering and project management.',
   },
   {
-    name: 'Priya Sharma',
+    name: 'R. Vidhya ',
     role: 'Technical Director',
     description: 'Expert in sustainable building systems and green certifications.',
   },
   {
-    name: 'Amit Patel',
+    name: 'M.  Senthil Murugesan',
     role: 'Head of Electrical Design',
     description: 'Specializes in high-rise buildings and data center infrastructure.',
   },
   {
-    name: 'Sneha Reddy',
+    name: 'R. Karthikeyan ',
     role: 'Head of Mechanical Design',
     description: 'HVAC specialist with expertise in industrial and commercial projects.',
   },
@@ -56,7 +57,6 @@ const AboutUs = () => {
       <Header />
 
       <main>
-        {/* Hero Section */}
         <section className="relative py-20 md:py-32 bg-primary overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
@@ -79,7 +79,7 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* Company Overview */}
+
         <section className="section-padding bg-background">
           <div className="container-max grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -123,48 +123,94 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* Vision, Mission & Strengths */}
-        <section className="section-padding bg-muted overflow-hidden">
-          <div className="container-max space-y-16">
 
-            {/* Vision & Mission */}
-            <div className="grid lg:grid-cols-2 gap-10">
-              {/* Vision */}
-              <div className="relative bg-gradient-to-br from-primary to-secondary text-primary-foreground p-8 md:p-10 rounded-2xl shadow-lg">
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
-                <Eye className="w-10 h-10 mb-6 opacity-90" />
-                <h3 className="text-3xl font-display font-bold mb-4">
-                  Our Vision
-                </h3>
-                <ul className="space-y-3 text-primary-foreground/90 text-lg">
-                  <li>• Professional approach</li>
-                  <li>• Ethical business practices</li>
-                  <li>• Mutual trust & honesty</li>
-                  <li>• Excellence in design</li>
-                  <li>• Engineering innovations</li>
-                </ul>
-              </div>
+        {/* Vision & Mission – Visual Modern Panel Design */}
+        <section className="py-20 bg-[#fbfcfc]">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
-              {/* Mission */}
-              <div className="relative bg-gradient-to-br from-primary to-secondary text-primary-foreground p-8 md:p-10 rounded-2xl shadow-lg">
-                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
-                <Target className="w-10 h-10 mb-6 opacity-90" />
-                <h3 className="text-3xl font-display font-bold mb-4">
-                  Our Mission
-                </h3>
-                <ul className="space-y-3 text-primary-foreground/90 text-lg">
-                  <li>• Ownership and accountability</li>
-                  <li>• Ethical and transparent delivery</li>
-                  <li>• Long-term client relationships</li>
-                  <li>• Innovative & efficient MEP solutions</li>
-                </ul>
-              </div>
+            {/* Section Header */}
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl text-[#214e75]  font-display font-bold">
+                Vision & Mission
+              </h2>
+              <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-gray-500">
+                Clear direction powered by innovation, ethics, and engineering excellence.
+              </p>
             </div>
 
-            {/* Strengths */}
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+
+              <div className="relative flex justify-center">
+                <div className="absolute -top-8 -left-8 w-72 h-72  rounded-full blur-2xl" />
+
+                <div className="relative bg-[#fbfcfc] ">
+                  <img
+                    src={visionMissionImg}
+                    alt="Vision and Mission"
+                    className="w-[240px] sm:w-[280px] lg:w-[320px] h-auto object-contain"
+                  />
+                </div>
+              </div>
+
+              {/* Right – Content */}
+              <div className='mr-20'>
+
+                <div className="mb-8">
+                  <span className="text-m font-semibold text-primary uppercase tracking-wide">
+                    Vision & Mission
+                  </span>
+                  <p className="mt-3 text-m text-black">
+                    To deliver future-ready MEP solutions that combine innovation,
+                    sustainability, and professional integrity.
+                  </p>
+                </div>
+
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    "Professional approach",
+                    "Ethical Business",
+                    "Mutual Trust & Honesty",
+                    "Ownership and Accountability",
+                    "Excellence in Design,",
+                    "Engineering Innovations",
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className="
+                group p-5 rounded-2xl
+                border border-gray-200
+                bg-gray-50
+                transition-all duration-300
+                hover:bg-white hover:shadow-md hover:shadow-[#275781]/90
+              "
+                    >
+                      <div className="flex items-start gap-3">
+                        <span className="mt-1 w-2.5 h-2.5 rounded-full bg-cyan-500 flex-shrink-0" />
+                        <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                          {item}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+        <section className="section-padding bg-muted overflow-hidden">
+          <div className="container-max space-y-16">
             <div>
               <div className="text-center mb-12">
-                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+                <span className="inline-block px-4 py-1.5 bg-cyan-500/10 text-cyan-500 text-sm font-semibold rounded-full mb-4">
                   Why Choose Us
                 </span>
                 <h2 className="text-3xl md:text-4xl text-[#214e75]  font-display font-bold">
@@ -201,53 +247,50 @@ const AboutUs = () => {
 
         <section className="py-20 bg-muted">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-lime-500">Our Leadership Team</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-[#275781]">Our Leadership Team</h2>
             <div className="max-w-6xl mx-auto space-y-12">
-              <div className="bg-card/50 backdrop-blur-sm rounded-lg border border-lime-500/20 overflow-hidden hover:border-lime-500/40 transition-all duration-300 animate-fade-in">
+              <div className="bg-card/50 backdrop-blur-sm rounded-lg border border-[#275781]/20 overflow-hidden hover:border-[#275781]/40 transition-all duration-300 animate-fade-in">
                 <div className="grid md:grid-cols-2 gap-8 p-8 items-center">
                   <div className="flex justify-center">
-
                   </div>
                   <div className="flex flex-col justify-center">
-                    <h3 className="text-3xl font-bold text-[#275781] mb-2">S. Arul Murugan </h3>
+                    <h3 className="text-3xl font-bold text-[#53c4d8] mb-2">S. Arul Murugan </h3>
                     <p className="text-xl text-foreground mb-2">Founder & Designated Partner</p>
-                    <p className="text-foreground  text-m leading-relaxed mb-4">
+                    <p className="text-foreground  text-sm leading-relaxed mb-4">
                       With over two decades of progressive experience in the MEP consultancy domain, I founded this organization in 2021, where I lead the MEP design projects with a focus on innovation, sustainability, and client-centric solutions. Prior to this, I served as Director at a MEP consultancy firm for three years. My longest and most formative tenure (2005-2018) was with the esteemed firm M/s. C. R. Narayana Rao (Consultants) Pvt Ltd, where I made significant contributions to landmark infrastructure projects and multidisciplinary collaboration. My professional journey began in 2004 as a Design Engineer at M/s. Air Treatment Engineering Pvt Ltd, where I established a foundation in HVAC systems. My career reflects a deep commitment to engineering excellence and delivering value-driven solutions across the built environment.
-
                     </p>
-                    <p className="text-foreground leading-relaxed mb-4">
+                    <p className="text-foreground leading-relaxed mb-4 text-sm">
                       Member of Indian Society of Heating, Refrigerating and Air Conditioning Engineers (ISHRAE) since 2008.
                       Member of Fire & Security Association of India (FSAI) since 2016.
                       Member of Indian Plumbing Association (IPA) since 2020.
-
                     </p>
-                    <p className="text-foreground italic">
-                      &quot;Engineering excellence comes from experience, integrity, and sustainable value.&quot; – S. Arul Murugan
+                    <p className="text-foreground italic text-sm">
+                      &quot;Engineering excellence comes from experience, integrity, and sustainable value.&quot;  <br />   – S. Arul Murugan
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-card/50 backdrop-blur-sm rounded-lg border border-lime-500/20 overflow-hidden hover:border-lime-500/40 transition-all duration-300 animate-fade-in">
+              <div className="bg-card/50 backdrop-blur-sm rounded-lg border border-[#53c4d8]/20 overflow-hidden hover:border-[#53c4d8]/40 transition-all duration-300 animate-fade-in">
                 <div className="grid md:grid-cols-2 gap-8 p-8 items-center">
                   <div className="flex flex-col justify-center order-2 md:order-1">
-                    <h3 className="text-3xl font-bold text-lime-500 mb-2">R. Vidhya </h3>
+                    <h3 className="text-3xl font-bold text-[#53c4d8] mb-2">R. Vidhya </h3>
                     <p className="text-xl text-foreground mb-2">Designated Partner</p>
-                    <p className="text-foreground leading-relaxed mb-4">
+                    <p className="text-foreground text-sm leading-relaxed mb-4">
                       R. Vidhya plays a key role in overseeing the administrative and human resources
                       functions at Laksar Design Consultancy LLP. She ensures smooth day-to-day
                       operations, effective workforce coordination, and structured internal processes
                       that support the organization’s engineering and design teams.
                     </p>
 
-                    <p className="text-foreground leading-relaxed mb-4">
+                    <p className="text-foreground leading-relaxed text-sm mb-4">
                       With a strong focus on organizational efficiency, compliance, and people
                       management, she contributes significantly to maintaining a professional,
                       well-organized, and productive work environment.
                     </p>
 
-                    <p className="text-foreground italic">
-                      “Strong administration builds strong teams and sustainable organizations..”
+                    <p className="text-foreground italic text-sm">
+                      “Strong administration builds strong teams and sustainable organizations.”
                     </p>
                   </div>
                   <div className="flex justify-center order-1 md:order-2">
@@ -260,49 +303,55 @@ const AboutUs = () => {
 
 
 
-
-        {/* Team */}
-        <section className="section-padding bg-muted">
+        <section className="section-padding bg-gradient-to-b from-muted to-background">
           <div className="container-max">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
-                Leadership
+
+            <div className="text-center mb-14">
+              <span className="inline-block px-5 py-2 bg-cyan-500/10 text-cyan-500 text-sm font-semibold rounded-full mb-4">
+                Our Team
               </span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                Meet Our Team
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-[#275781] mb-3">
+                Meet the Minds Behind Us
               </h2>
+
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {teamMembers.map((member, index) => (
-                <div key={index} className="bg-card rounded-xl overflow-hidden shadow-sm card-hover">
-                  <div className="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                    <Users className="w-12 h-12 text-primary-foreground" />
+                <div
+                  key={index}
+                  className="relative group bg-white/70 backdrop-blur-xl rounded-3xl p-6 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 ">
+
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#53c4d8]/30 to-[#50a93e]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  {/* Avatar */}
+                  <div className="relative z-10 flex justify-center -mt-12 mb-4">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#53c4d8] to-[#275781] flex items-center justify-center shadow-lg">
+                      <Users className="w-10 h-10 text-white" />
+                    </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold">{member.name}</h3>
-                    <p className="text-accent text-sm mb-2">{member.role}</p>
-                    <p className="text-muted-foreground text-sm">{member.description}</p>
+
+                  {/* Content */}
+                  <div className="relative z-10 text-center">
+                    <h3 className="text-lg font-semibold text-[#275781]">
+                      {member.name}
+                    </h3>
+
+                    <p className="text-sm font-medium text-[#53c4d8] mb-3">
+                      {member.role}
+                    </p>
+
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {member.description}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
+
           </div>
         </section>
-
-        {/* CTA */}
-        <section className="section-padding bg-primary text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-6">
-            Let’s Build Something Amazing Together
-          </h2>
-          <Link to="/contact-us">
-            <Button variant="hero" size="xl">
-              Contact Us Today
-            </Button>
-          </Link>
-        </section>
       </main>
-
       <Footer />
     </div>
   );

@@ -138,7 +138,7 @@ const HeroCarousel = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/40 transition-all"
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full  backdrop text-white flex items-center justify-center hover:bg-white/40 transition-all"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6" />
@@ -146,7 +146,7 @@ const HeroCarousel = () => {
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/40 transition-all"
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full   text-white flex items-center justify-center hover:bg-white/40 transition-all"
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6" />

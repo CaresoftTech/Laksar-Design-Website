@@ -78,18 +78,18 @@ const ContactUs = () => {
             <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
               {/* Contact Info */}
               <div className="lg:col-span-1">
-                <h2 className="text-2xl font-display font-bold text-foreground mb-6">
+                <h2 className="text-2xl font-display font-bold text-[#275781] mb-6">
                   Contact Information
                 </h2>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 rounded-lg bg-[#275781]/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-[#275781]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Office Address</h3>
+                      <h3 className="font-semibold text-[#275781] mb-1">Office Address</h3>
                       <p className="text-muted-foreground text-sm">
-                        Plot No. 2A, <br /> Royal Nagar 1st Main Road, <br />
+                        Plot No. 2A,  Royal Nagar 1st Main Road, <br />
                         Royal Nagar, Kovoor, <br /> Chennai – 600 128. <br />
                         Tamil Nadu, India
                       </p>
@@ -100,7 +100,7 @@ const ContactUs = () => {
                       <Phone className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Phone Number</h3>
+                      <h3 className="font-semibold text-accent mb-1">Phone Number</h3>
                       <p className="text-muted-foreground text-sm">
                         +91 1234567890<br />
                         +91 1234567890
@@ -108,11 +108,11 @@ const ContactUs = () => {
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-secondary" />
+                    <div className="w-12 h-12 rounded-lg bg-[#9ec437]/10 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-[#9ec437]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Email Address</h3>
+                      <h3 className="font-semibold text-[#9ec437] mb-1">Email Address</h3>
                       <p className="text-muted-foreground text-sm">
                         arul@laksardesign.in <br />
                         admin@laksardesign.in
@@ -120,11 +120,11 @@ const ContactUs = () => {
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-highlight/10 flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-highlight" />
+                    <div className="w-12 h-12 rounded-lg bg-[#50a93e]/10 flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-[#50a93e]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Office Hours</h3>
+                      <h3 className="font-semibold text-[#50a93e] mb-1">Office Hours</h3>
                       <p className="text-muted-foreground text-sm">
                         Monday - Friday: 9:00 AM - 6:00 PM<br />
                         Saturday: 10:00 AM - 2:00 PM
@@ -137,14 +137,14 @@ const ContactUs = () => {
               {/* Contact Form */}
               <div className="lg:col-span-2">
                 <div className="bg-card p-6 md:p-8 rounded-xl shadow-sm">
-                  <h2 className="text-2xl font-display font-bold text-foreground mb-6">
+                  <h2 className="text-2xl font-display font-bold text-[#275781] mb-6">
                     Send Us a Message
                   </h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                          Full Name *
+                        <label htmlFor="name" className="block text-sm font-medium text-[#275781] mb-2">
+                          Full Name <span className='text-red-500'>*</span>
                         </label>
                         <Input
                           id="name"
@@ -157,8 +157,8 @@ const ContactUs = () => {
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                          Email Address *
+                        <label htmlFor="email" className="block text-sm font-medium text-[#275781] mb-2">
+                          Email Address <span className='text-red-500'>*</span>
                         </label>
                         <Input
                           id="email"
@@ -174,8 +174,8 @@ const ContactUs = () => {
                     </div>
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                          Phone Number
+                        <label htmlFor="phone" className="block text-sm font-medium text-[#275781] mb-2">
+                          Phone Number <span className='text-red-500'>*</span>
                         </label>
                         <Input
                           id="phone"
@@ -187,8 +187,8 @@ const ContactUs = () => {
                         />
                       </div>
                       <div>
-                        <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                          Subject *
+                        <label htmlFor="subject" className="block text-sm font-medium text-[#275781] mb-2">
+                          Subject <span className='text-red-500'>*</span> 
                         </label>
                         <Input
                           id="subject"
@@ -202,8 +202,8 @@ const ContactUs = () => {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                        Message *
+                      <label htmlFor="message" className="block text-sm font-medium text-[#275781] mb-2">
+                        Message  <span className='text-red-500'>*</span>
                       </label>
                       <Textarea
                         id="message"
