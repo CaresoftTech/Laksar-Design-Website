@@ -32,11 +32,11 @@ const Header = () => {
       <div className="hidden lg:block bg-primary text-primary-foreground py-2">
         <div className="container-max px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+911234567890" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="tel:+919176991714" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Phone className="w-4 h-4" />
-              +91 123 456 7890
+              +91 91769 91714
             </a>
-            <a href="mailto:info@laksardesign.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="arul@laksardesign.in" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="w-4 h-4" />
               arul@laksardesign.in
             </a>

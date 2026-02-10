@@ -102,8 +102,7 @@ const ContactUs = () => {
                     <div>
                       <h3 className="font-semibold text-accent mb-1">Phone Number</h3>
                       <p className="text-muted-foreground text-sm">
-                        +91 1234567890<br />
-                        +91 1234567890
+                        +91 91769 91714
                       </p>
                     </div>
                   </div>

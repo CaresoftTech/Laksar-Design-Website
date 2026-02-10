@@ -51,7 +51,7 @@ const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://wa.me/911234567890"
+                href="https://wa.me/919176991714"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors"
@@ -112,14 +112,14 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent flex-shrink-0" />
-                <a href="tel:+911234567890" className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
-                  +91 123 456 7890
+                <a href="tel:+919176991714" className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
+                  +91 91769 91714
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent flex-shrink-0" />
                 <a href="mailto:arul@laksardesign.in" className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
-                  arul@laksardesign.in 
+                  arul@laksardesign.in
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -133,14 +133,14 @@ const Footer = () => {
         </div>
       </div>
 
-{/* Copyright */}
-<div className="border-t border-primary-foreground/20">
-  <div className="container-max px-4 py-6">
-    <p className="text-sm text-primary-foreground/70 text-center">
-      © {currentYear} Laksar Design Consultancy LLP. All rights reserved.
-    </p>
-  </div>
-</div>
+      {/* Copyright */}
+      <div className="border-t border-primary-foreground/20">
+        <div className="container-max px-4 py-6">
+          <p className="text-sm text-primary-foreground/70 text-center">
+            © {currentYear} Laksar Design Consultancy LLP. All rights reserved.
+          </p>
+        </div>
+      </div>
 
     </footer>
   );
